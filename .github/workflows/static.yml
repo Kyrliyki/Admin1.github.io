@@ -34,14 +34,12 @@ jobs:
           DIV_COUNT=$(grep -o '<div class="global__main-section-title">' index.html | wc -l)
           if [ "$DIV_COUNT" -ne 4 ]; then
             exit 1
-          else
           fi
 
           # Проверка количества img элементов
           IMG_COUNT=$(grep -o '<img' index.html | wc -l)
           if [ "$IMG_COUNT" -ne 4 ]; then
             exit 1
-          else
           fi
   deploy:
     environment:
